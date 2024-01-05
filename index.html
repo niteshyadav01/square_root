@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Square root</title>
+<script>
+function check()
+{
+event.preventDefault();
+
+let num = document.getElementById("num");
+let ans = document.getElementById("ans");
+let n = parseFloat(num.value);
+if(n<0){
+alert("Negative number not allowed");
+num.focus();
+ans.innerHTML = "";
+return;
+}
+let r = n**0.5;
+let msg = "sqaure root = "+ r.toFixed(2);
+ans.innerHTML = msg;
+}
+
+
+</script>
+</head>
+<body>
+<center>
+<h1>Square root web app</h1>
+<form onsubmit="check()">
+<input type="number" step="2" placeholder="Enter the number" id="num"/>
+<br/><br/>
+<input type="submit"/>
+</form>
+<h2 id="ans"></h2>
+</center>
+</body>
+</html>
